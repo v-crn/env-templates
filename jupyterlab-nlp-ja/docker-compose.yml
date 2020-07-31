@@ -1,6 +1,7 @@
 version: '3.7'
 services:
   jupyterlab-nlp-ja:
+    env_file: ./.env
     build: .
     image: syunyooo/jupyterlab-nlp-ja
     container_name: jupyterlab-nlp-ja

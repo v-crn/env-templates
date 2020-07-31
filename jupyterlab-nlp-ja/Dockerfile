@@ -1,5 +1,4 @@
 FROM syunyooo/jupyterlab
-MAINTAINER v-crn
 
 # mecab
 RUN apt update && apt -y install python3.7-dev curl mecab libmecab-dev mecab-ipadic mecab-ipadic-utf8 file fonts-migmix \
