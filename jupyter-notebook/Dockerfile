@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 # install basic dependencies
 RUN apt update && apt upgrade -y && apt install -y --no-install-recommends \
-    sudo git wget cmake nano vim gcc g++ build-essential ca-certificates software-properties-common \
+    sudo git openssh-server wget cmake nano vim gcc g++ build-essential ca-certificates software-properties-common \
     pkg-config zip g++ zlib1g-dev unzip nodejs npm curl iputils-ping net-tools\
     && apt clean && rm -rf /var/lib/apt/lists/*
 
