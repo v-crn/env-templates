@@ -11,11 +11,25 @@
   - toc
   - jupyterlab_go_to_definition
 
+## Register docker image
+
+イメージのビルド
+
+```sh
+docker build -t vcrn/jupyterlab .
+```
+
+イメージのプッシュ
+
+```sh
+docker push vcrn/jupyterlab:latest
+```
+
 ## Custom Extension
 
-`FROM syunyooo/jupyterlab`で拡張できます。
+`FROM vcrn/jupyterlab` で拡張できる。
 
-以下拡張例
+例：
 
 - [jupyterlab-nlp-ja](https://github.com/shunyooo/env-templates/tree/master/jupyterlab-nlp-ja)：日本語の自然言語処理用に拡張
 
@@ -28,7 +42,7 @@
 version: '3.7'
 services:
   jupyterlab:
-    image: syunyooo/jupyterlab
+    image: vcrn/jupyterlab
     ports:
       - 8888:8888
     volumes:
@@ -41,4 +55,3 @@ services:
 ```
 
 3. Run `docker-compose up`
-
